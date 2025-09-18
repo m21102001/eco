@@ -1,0 +1,38 @@
+.emptycard{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    margin: 20px;
+    
+}
+.card-text{
+    padding-top: 20px;
+
+}
+.GoShopping{
+     border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin: 5px;
+}
+.GoShopping:hover {
+  border-color: #085e9c;
+background-color: #242424;  
+border-radius: 20px;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.cardProduct{
+  margin: 40px;
+  /* border: .5px solid rgba(255,255,255,0.2);
+  border-radius: 20px; */
+  padding: 30px;
+}

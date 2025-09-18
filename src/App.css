@@ -1,0 +1,9 @@
+body,#root {
+  background-color: #242424;
+  color: whitesmoke;
+}
+
+.card {
+  padding: 2em;
+}
+

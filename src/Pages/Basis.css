@@ -1,0 +1,38 @@
+.navbar{
+    position :fixed;
+     z-index: 1000;
+    width: 100%;
+    height: 60px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(../navbarCover.jpg ); 
+  background-size: cover;
+
+    
+}
+body{
+     
+ background-color: #242424;
+}
+.CartIcon{
+     background: rgba(255, 255, 255, 0); 
+  backdrop-filter: blur(10px);         
+  border:none;
+   border-radius: 20px; 
+  color: #fff; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+.CartIcon:hover {
+  background: rgba(255, 255, 255, 0.104); 
+  border-color: rgba(14, 113, 179, 0.226);
+/* background-color: #373737;   */
+border-radius: 15px;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
