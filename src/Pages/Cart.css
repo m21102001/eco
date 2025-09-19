@@ -1,16 +1,31 @@
-.emptycard{
-    width: 100%;
-    height: 100%;
-    padding: 30px;
-    margin: 20px;
-    
+.shoppingCart{
+background: linear-gradient(to right,#070762,rgb(15, 8, 135),rgb(11, 63, 154),lightskyblue,rgb(142, 206, 246),rgb(154, 207, 239));
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+text-shadow: #1212e3;
+box-shadow: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.card-text{
-    padding-top: 20px;
+
+
+.emptycard {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  margin: 20px;
 
 }
-.GoShopping{
-     border-radius: 8px;
+
+.card-text {
+  padding-top: 20px;
+}
+
+.cartButton {
+  border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -21,18 +36,23 @@
   transition: border-color 0.25s;
   margin: 5px;
 }
-.GoShopping:hover {
+
+.cartButton:hover {
   border-color: #085e9c;
-background-color: #242424;  
-border-radius: 20px;
+  background-color: #242424;
+  border-radius: 20px;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-.cardProduct{
+.numbers{
+  color: skyblue;
+  font-weight: bold;
+}
+
+.cardProduct {
   margin: 40px;
-  /* border: .5px solid rgba(255,255,255,0.2);
-  border-radius: 20px; */
   padding: 30px;
 }

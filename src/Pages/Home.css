@@ -1,0 +1,81 @@
+.carousel {
+  border-radius: 20px;              /* زوايا ناعمة */
+  overflow: hidden;                 /* يمنع أي خروج للعناصر */
+  background: rgba(0, 0, 0, 0.4);   /* خلفية شفافة */
+  backdrop-filter: blur(8px);       /* تأثير زجاج */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5); /* ظل ناعم */
+  padding: 20px;                    /* مساحة داخلية */
+  max-width: 800px;                 /* حجم مناسب */
+  margin: 40px auto;                /* في النص */
+}
+
+.carousel-center {
+  height: 400px;               
+  display: flex;              
+  justify-content: center;     
+  align-items: center;         
+  flex-direction: column;      
+  gap: 15px;                   /* مسافة بين الصورة والعنوان */
+}
+
+.imgCarousel {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 10px;          /* الحواف ناعمة */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imgCarousel:hover {
+  transform: scale(1.1);        /* تكبير بسيط */
+  box-shadow: 0 0 15px rgba(135, 206, 250, 0.6); /* توهج سكاي بلو */
+}
+
+.carousel-center h3 {
+  color: skyblue;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.7); /* توهج للنص */
+}
+
+.carouselTitel {
+  display: flex;
+  justify-content: center;
+  color: skyblue;
+  font-weight: bolder;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.Button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin: 5px;
+  
+
+}
+
+.Button:hover {
+  border-color: #085e9c;
+  background-color: #242424;
+  border-radius: 20px;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.go-shopping-wrapper {
+  display: flex;
+  justify-content: center;  /* يجي في النص */
+  margin-top: 20px;
+}

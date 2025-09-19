@@ -1,15 +1,80 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useProducts, useRandomProducts } from './JS-Files/Hooks';
+import './Home.css'
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const Home = () => {
+  const randomProducts = useRandomProducts();
+  // const { filterByCategory } = useProducts();
+  const navigate = useNavigate();
+ const handleCategoryClick = (category) => {
+  localStorage.setItem("selectedCategory", category);
+  navigate('/products');
+};
+
   return (
     <>
-    <h1> Welcome to our Shop</h1>
-    <Link to={'./Product'}> 
-    <button>
-Start Shopping
-    </button>
-    </Link>
+     <section className="py-5">
+    <div className="row align-items-center ">
+      <div className="col-md-6 text-center ">
+        <img src='src\img1.jpg' className="img-fluid "/>
+      </div>
+      <div className="col-md-6">
+        <h3 className="SEO d-flex fw-light fs-3" style={{color:'skyblue'}}>Why Choose Us?</h3>
+        <h6 className="psec1 fw-lighter ">We make your shopping experience easier by offering carefully selected products 
+  at fair prices and guaranteed quality. Our goal is to provide you with everything 
+  you need quickly and effortlessly, with trusted service that makes shopping more convenient.</h6>
+        
+      </div>
+    </div>
+  </section>
+      <div id="carouselExample" className="carousel slide">
+        <h4 className='carouselTitel'>What do we have?</h4>
+        <div className="carousel-inner">
+          {randomProducts.map((product, index) => (
+            <div
+              key={product.id}
+              className={`carousel-item ${index === 0 ? 'active' : ''}`}
+            >
+              <div className="carousel-center">
+                <img
+                  src={product.image}
+                  className="imgCarousel"
+                  onClick={() => handleCategoryClick(product.category)}
+                />
+                <h3>{product.category}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+
+
+
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div >
+      <div className="go-shopping-wrapper">
+        <Link to={'/Product'}>
+          <button className="Button">Go Shopping</button>
+        </Link>
+      </div>
     </>
   )
 }

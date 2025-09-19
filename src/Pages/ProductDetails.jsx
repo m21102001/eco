@@ -8,11 +8,11 @@ import { useCart } from './JS-Files/Hooks';
 const ProductDetails = () => {
   const value = useLocation().state.value
   
-   const { addToCart } = useCart();
-      const handleAddToCart = () => {
-          addToCart(value);
-          alert("The product has been added to the cart.✅");
-      };
+  const { addToCart } = useCart();
+  const handleAddToCart = (value) => {
+    addToCart(value);
+
+  };
   return (
     <div>
       <div className="cardProduct mb-3" style={{ maxwidth: '540px' }}>
