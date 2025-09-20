@@ -42,7 +42,7 @@ const ProductDetails = () => {
                 <p className="card-text"></p>
               </ul>
               <Link to={'/Cart'} >
-                <button onClick={handleAddToCart} className='proButton'>ِAdd to Cart</button>
+                <button onClick={ ()=>handleAddToCart(value)} className='proButton'>ِAdd to Cart</button>
               </Link>
             </div>
           </div>
