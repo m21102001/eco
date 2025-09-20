@@ -5,6 +5,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
 import { AiOutlineArrowUp } from "react-icons/ai";
+
 import '../Pages/Basis.css'
 import { useCart, useProducts } from './JS-Files/Hooks';
 const Basis = () => {
@@ -152,7 +153,7 @@ const Basis = () => {
 
 
                     <li>
-                               <button
+                        <button
                             className="linkSideBar"
                             onClick={() => {
                                 navigate("/Cart");
@@ -160,19 +161,20 @@ const Basis = () => {
                             }}
                         >
 
-                           🛒 Cart
+                            🛒 Cart
                         </button>
-                            
-                        
+
+
                     </li>
 
                 </ul>
- 
+
             </div >
 
-             
-                <button id="top-bt" className="btntop" onClick={()=>window.scrollTo({top: 0, behavior: 'smooth'})}><AiOutlineArrowUp color="Skyblue" /></button>
-                
+
+            <button id="top-bt" className="btntop" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><AiOutlineArrowUp color="Skyblue" /></button>
+
+
         </>
 
     )

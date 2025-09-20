@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLocation } from 'react-router'
 import { Link } from 'react-router-dom';
 import '../Pages/Product.css'
@@ -7,23 +7,25 @@ import { useCart } from './JS-Files/Hooks';
 
 const ProductDetails = () => {
   const value = useLocation().state.value
+ 
   
   const { addToCart } = useCart();
   const handleAddToCart = (value) => {
     addToCart(value);
-
   };
+  // console.log(product);
+  
   return (
     <div>
       <div className="cardProduct mb-3" style={{ maxwidth: '540px' }}>
         <div className="row g-0">
           <div className="col-md-4">
-            <img src={value.image} className="img-fluid rounded-start" width={250} alt={value.description} />
+            <img src={value?.image} className="img-fluid rounded-start" width={250} alt={value?.description} />
           </div>
           <div className="col-md-8">
             <div className="card-body">
               <ul>
-                <p className="card-title"><span className='fw-bolder' style={{ color: '#085e9c' }}>{value.title}</span></p>
+                <p className="card-title"><span className='fw-bolder' style={{ color: '#085e9c' }}>{value?.title}</span></p>
                 <li>
                   <p className="card-description">{value.description}</p>
                 </li>

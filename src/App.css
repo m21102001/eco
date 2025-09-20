@@ -1,6 +1,7 @@
 body,#root {
   background-color: #242424;
   color: whitesmoke;
+  overflow-x: hidden;
 }
 
 .card {
