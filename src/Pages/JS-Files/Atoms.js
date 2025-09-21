@@ -32,7 +32,6 @@ export const cartState = atom({
 export const cartCount = selector({
     key: 'cartCountKey',
     get: ({ get }) => {
-
         const cart = get(cartState);
         return cart.length;
     },
@@ -40,7 +39,6 @@ export const cartCount = selector({
 export const totalCount = selector({
     key: 'TotalItemsKey',
     get: ({ get }) => {
-
         const cart = get(cartState);
         //   return cart.length;
         return cart.reduce((total, item) => total + item.qty, 0);
