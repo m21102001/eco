@@ -7,6 +7,7 @@ import Cart from '../Pages/Cart'
 import Basis from '../Pages/Basis'
 import Home from '../Pages/Home'
 import Footer from '../Pages/Footer'
+import SearchProduct from '../Pages/SearchProduct'
 
 
 
@@ -20,6 +21,7 @@ export const Routers = () => {
         <div style={{ paddingTop: '80px' }}></div>
         <Routes>
           <Route path='/Product' element={<Product />} />
+          <Route path='/Product/search' element={<SearchProduct />} />
           <Route path='/Product/Details' element={<ProductDetails />} />
           <Route path='/Buy' element={<Buy />} />
           <Route path='/Cart' element={<Cart />} />
