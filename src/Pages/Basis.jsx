@@ -29,7 +29,7 @@ const Basis = () => {
     if (navbarSearchTerm.trim()) {
       e
       searchProducts(navbarSearchTerm);
-       navigate(`/Product/search?query=${navbarSearchTerm}`)
+       navigate(`/Product`)
     }
   }
 
